@@ -15,7 +15,7 @@ if (userInputAge === '' || userInputAge === null || Number.isNaN(Number(userInpu
     console.log('adult');
 } else if (userInputAge >= 65 && userInputAge < 100) {
     console.log('old');
-} else if (userInputAge >= 100 && userInputAge <= 150) {
+} else {
     console.log('respect');
 } 
 
