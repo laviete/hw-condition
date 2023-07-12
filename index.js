@@ -2,24 +2,37 @@
 
 const userInputAge = prompt('Enter your age');
 const userInputAgeCheck = Number(userInputAge);
-if (userInputAge === '' || userInputAge === null || 
-Number.isNaN(userInputAgeCheck) || userInputAge < 0 || userInputAge > 150) {
-    console.log('error');
-} else if (userInputAge >= 0 && userInputAge < 2) {
-    console.log('baby');
-} else if (userInputAge >= 2 && userInputAge < 6) {
-    console.log('kinder');
-} else if (userInputAge >= 6 && userInputAge < 12) {
-    console.log('child');
-} else if (userInputAge >= 12 && userInputAge < 18) {
-    console.log('teenager');
-} else if (userInputAge >= 18 && userInputAge < 65) {
-    console.log('adult');
-} else if (userInputAge >= 65 && userInputAge < 100) {
-    console.log('old');
-} else if (userInputAge >= 100 && userInputAge <= 150) {
+const errorMessage ='error';
+const babyClassification ='baby';
+const kinderClassification ='kinder';
+const childClassification ='child';
+const teenagerClassification ='teenager';
+const adultClassification ='adult';
+const oldClassification ='old';
+
+if (userInputAge === '' || 
+userInputAge === null || 
+Number.isNaN(userInputAgeCheck) || 
+userInputAgeCheck < 0 || 
+userInputAgeCheck > 150) 
+{
+    console.log(errorMessage);
+} else if (userInputAgeCheck < 2) {
+    console.log(babyClassification);
+} else if (userInputAgeCheck < 6) {
+    console.log(kinderClassification);
+} else if (userInputAgeCheck < 12) {
+    console.log(childClassification);
+} else if (userInputAgeCheck < 18) {
+    console.log(teenagerClassification);
+} else if (userInputAgeCheck < 65) {
+    console.log(adultClassification);
+} else if (userInputAgeCheck < 100) {
+    console.log(oldClassification);
+} else {
     console.log('respect');
 } 
+
 
 // Написати функцію Калькулятор, яка приймає аргументами два числа
 // и знак(рядок - +-*/) і повертає результат виконання дії або NaN, 
