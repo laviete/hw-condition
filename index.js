@@ -1,7 +1,9 @@
 //Людина вводить вік, ви виводите класифікаційну назву віку
 
 const userInputAge = prompt('Enter your age');
-if (userInputAge === '' || userInputAge === null || Number.isNaN(Number(userInputAge)) || userInputAge < 0 || userInputAge > 150) {
+const userInputAgeCheck = Number(userInputAge);
+if (userInputAge === '' || userInputAge === null || 
+Number.isNaN(userInputAgeCheck) || userInputAge < 0 || userInputAge > 150) {
     console.log('error');
 } else if (userInputAge >= 0 && userInputAge < 2) {
     console.log('baby');
@@ -15,7 +17,7 @@ if (userInputAge === '' || userInputAge === null || Number.isNaN(Number(userInpu
     console.log('adult');
 } else if (userInputAge >= 65 && userInputAge < 100) {
     console.log('old');
-} else {
+} else if (userInputAge >= 100 && userInputAge <= 150) {
     console.log('respect');
 } 
 
